@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Bai+Jamjuree:wght@400;600&family=Edu+QLD+Beginner:wght@500&family=Fira+Sans:ital,wght@1,700&family=Gentium+Book+Plus:ital@1&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Mingzat&family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;600&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@300;400;500;700;800;900&family=Rubik:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'Raleway';
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #0C122C;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0 5%;
+}
+.bg{
+    width: 100%;
+    height: 50%;
+    background-image: url(data/bg-desktop.png);
+    position: absolute;
+    bottom: 0;
+}
+.box{
+    background-color: #1D2C67;
+    border-radius: 18px;
+    z-index: 1;
+}
+.one{
+    max-width: 20rem;
+    width: 100%;
+    padding: 35px 15px 20px 30px;
+    border-top-right-radius: 90px;
+}
+.pictures{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px 0;
+}
+.image{
+    width: 40px;
+    height: 40px;
+    background-color: #0C122C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.two{
+    max-width: 650px;
+    width: 100%;
+    color: #dddbff;
+    padding: 50px 40px ;
+    position: relative;
+}
+.number{
+    font-weight: 700;
+}
+.progress{
+    width: 100%;
+    height: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 15px 0;
+}
+.line{
+    width: 70%;
+    height: 14px;
+    background-image: linear-gradient(90deg,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.ball{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: hsl(243, 100%, 93%);
+    position: absolute;
+    animation-name: try;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes try{
+    0%{
+        right: 50%;
+    }
+    100%{
+        right: 0;
+    }
+}
+.small-txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.change-box{
+    position: relative;
+}
+.p-4{
+    position: absolute;
+    background-color: #fff;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    padding: 0.80rem;
+    top: -11rem;
+    right: 0;
+    border-radius: 10px 10px 0 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.p-4::after{
+    height: 20px;
+    content: '';
+    background-color: #fff;
+    width: 18%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: skew(180deg,40deg);
+}
+.big-number{
+    color: #000;
+    font-size: 40px;
+}
+.gb{
+    color: #95969b;
+    letter-spacing: 2px;
+}
+@media screen and (max-width:920px){
+    .container{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .bg{
+        background-image: url(data/bg-mobile.png);
+        background-size: cover;
+        height: 100vh;
+    }
+    .p-4{
+        width: 260px;
+        padding: 0.50rem;
+        left: 50%;
+        top: -1.5rem;
+        transform: translate(-50%,50%);
+        border-bottom-right-radius: 10px;
+    }
+    .p-4::after{
+        display: none;
+    }
+    p{
+        font-size: 16px;
+    }
+    .number{
+        font-size: 15px;
+    }
+    .one{
+        padding: 35px 10px 8px 30px;
+        max-width: 400px;
+    }
+    .two{
+        padding: 40px 15px;
+        max-width: 400px;
+    }
+    .p-1{
+        text-align: center;
+    }
+}
